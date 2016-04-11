@@ -1,7 +1,7 @@
 {
     "name": "azure_uamqp_c",
-    "author": "Microsoft",
+    "author": "dcristo@microsoft.com",
     "license": "MIT",
     "version": "0.0.2",
-    "description": "General purpose AMQP library"
+    "description": "Experimental port - General purpose AMQP library"
 }
