@@ -1,6 +1,6 @@
 {
     "name": "azure_uamqp_c",
-    "author": "Dan Cristoloveanu",
+    "author": "Microsoft",
     "license": "MIT",
     "version": "0.0.2",
     "description": "General purpose AMQP library"
