@@ -11,9 +11,9 @@ extern "C" {
 #include <stddef.h>
 #endif /* __cplusplus */
 
-#include "xio.h"
+#include "azure_c_shared_utility/xio.h"
+#include "azure_c_shared_utility/xlogging.h"
 #include "sasl_mechanism.h"
-#include "xlogging.h"
 
 typedef struct SASLCLIENTIO_CONFIG_TAG
 {
@@ -27,6 +27,8 @@ extern int saslclientio_open(CONCRETE_IO_HANDLE sasl_client_io, ON_IO_OPEN_COMPL
 extern int saslclientio_close(CONCRETE_IO_HANDLE sasl_client_io, ON_IO_CLOSE_COMPLETE on_io_close_complete, void* callback_context);
 extern int saslclientio_send(CONCRETE_IO_HANDLE sasl_client_io, const void* buffer, size_t size, ON_SEND_COMPLETE on_send_complete, void* callback_context);
 extern void saslclientio_dowork(CONCRETE_IO_HANDLE sasl_client_io);
+extern int saslclientio_setoption(CONCRETE_IO_HANDLE socket_io, const char* optionName, const void* value);
+
 extern const IO_INTERFACE_DESCRIPTION* saslclientio_get_interface_description(void);
 
 #ifdef __cplusplus

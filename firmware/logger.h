@@ -13,6 +13,7 @@ extern "C" {
 #define LOG_LINE 0x01
 
 #define LOG(logger, ...) if (logger != NULL) logger(__VA_ARGS__)
+#define LOGX(logger, ...) if (logger != NULL) logger(__VA_ARGS__)
 //#define LOG(logger, ...)
 
 #ifdef __cplusplus

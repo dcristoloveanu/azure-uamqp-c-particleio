@@ -7,17 +7,21 @@
 #endif
 #include <stdarg.h>
 #include <stdio.h>
-#include "xlogging.h"
+#include "azure_c_shared_utility/xlogging.h"
+
+extern void log_serial(char* log_line);
 
 void consolelogger_log(unsigned int options, char* format, ...)
 {
+        char temp_buf[256];
 	va_list args;
 	va_start(args, format);
-	(void)vprintf(format, args);
+	vsprintf(temp_buf, format, args);
 	va_end(args);
+        //log_serial(temp_buf);
 
 	if (options & LOG_LINE)
 	{
-		(void)printf("\r\n");
+		//log_serial("\r\n");
 	}
 }

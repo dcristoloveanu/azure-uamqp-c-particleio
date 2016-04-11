@@ -4,6 +4,8 @@
 #ifndef AMQP_ALLOC_H
 #define AMQP_ALLOC_H
 
+#pragma GCC diagnostic ignored "-Wunused-value"
+
 #ifdef __cplusplus
 extern "C" {
 #include <cstddef>
